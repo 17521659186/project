@@ -32,8 +32,8 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 CORS_ORIGIN_WHITELIST = (
-    'http://192.168.30.107:9527',
-    'http://localhost:9527',
+    'http://192.168.30.107:9528',
+    'http://localhost:9528',
 
 )
 CORS_ALLOW_CREDENTIALS = True
@@ -159,7 +159,7 @@ REST_FRAMEWORK = {
 import datetime
 
 JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=10),
     'JWT_AUTH_HEADER_PREFIX': 'TOKEN',
 }
 

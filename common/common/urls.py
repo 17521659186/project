@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r"^users/",include("users.urls")),
     url(r"^robots/",include("robots.urls")),
+    url(r"^logs/",include("logs.urls")),
 
 
 ]
