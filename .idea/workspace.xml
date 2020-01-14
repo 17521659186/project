@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8d5462b-d989-43c0-b800-d24b64c4857f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/apps/logs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/apps/logs/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/apps/logs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/apps/logs/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/apps/robots/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/apps/robots/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/apps/robots/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/apps/robots/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/common/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/common/urls.py" afterDir="false" />
+    <list default="true" id="c8d5462b-d989-43c0-b800-d24b64c4857f" name="Default Changelist" comment="日志分页">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,14 +54,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/common/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="120" column="23" lean-forward="true" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+            <state relative-caret-position="131">
+              <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
               <folding>
                 <element signature="e#307#316#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
         </entry>
@@ -140,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/common/apps/logs/urls.py" />
         <option value="$PROJECT_DIR$/common/apps/logs/serializer.py" />
         <option value="$PROJECT_DIR$/common/apps/logs/models.py" />
@@ -149,6 +151,7 @@
         <option value="$PROJECT_DIR$/common/apps/robots/views.py" />
         <option value="$PROJECT_DIR$/common/apps/logs/views.py" />
         <option value="$PROJECT_DIR$/common/common/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -195,7 +198,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AliyunProjectTest" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -258,7 +261,7 @@
       <workItem from="1569820673054" duration="146000" />
       <workItem from="1574070670666" duration="3044000" />
       <workItem from="1577770708365" duration="2699000" />
-      <workItem from="1578893507955" duration="23469000" />
+      <workItem from="1578893507955" duration="23708000" />
     </task>
     <task id="LOCAL-00001" summary="train over">
       <created>1567649373903</created>
@@ -267,22 +270,30 @@
       <option name="project" value="LOCAL" />
       <updated>1567649373903</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="日志分页">
+      <created>1578988768184</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578988768185</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78097000" />
+    <option name="totallyTimeSpent" value="78336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1853" height="930" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17396122" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17396122" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49962378" visible="true" weight="0.4681648" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49962378" visible="true" weight="0.5343321" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -304,7 +315,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="train over" />
-    <option name="LAST_COMMIT_MESSAGE" value="train over" />
+    <MESSAGE value="日志分页" />
+    <option name="LAST_COMMIT_MESSAGE" value="日志分页" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -396,13 +408,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -996,11 +1001,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/common/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="120" column="23" lean-forward="true" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+        <state relative-caret-position="131">
+          <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
           <folding>
             <element signature="e#307#316#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
