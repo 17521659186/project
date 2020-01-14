@@ -87,7 +87,6 @@ ROOT_URLCONF = 'common.urls'
 
 AUTH_USER_MODEL = 'users.User'
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -119,7 +118,7 @@ DATABASES = {
         'PORT': 3306,
         'HOST': "39.98.163.51",
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'glossa_mysql_test',
         'NAME': 'chat_management'
     }
 }
@@ -161,10 +160,9 @@ USE_TZ = False
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "front/static")
 STATIC_URL = '/static/'
 
-
 AUTHENTICATION_BACKENDS = (
-  'social_core.backends.qq.QQOAuth2',
-  'django.contrib.auth.backends.ModelBackend'
+    'social_core.backends.qq.QQOAuth2',
+    'django.contrib.auth.backends.ModelBackend'
 )
 
 WX_APP_ID = "wx8b68fd63edbd0716"
@@ -173,15 +171,13 @@ WX_OPEN_APP_ID = "wx0e738f974254959e"
 SOCIAL_AUTH_QQ_KEY = '101474184'
 SOCIAL_AUTH_QQ_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'
 
-
 REST_FRAMEWORK = {
     # 配置
     'DEFAULT_AUTHENTICATION_CLASSES': (
-            'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-            'rest_framework.authentication.BasicAuthentication',
-            'rest_framework.authentication.SessionAuthentication',
-        ),
-
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
 
 }
 import datetime
@@ -201,4 +197,45 @@ TRAIN_URL = "http://192.168.30.183:8081/test/ai/train"
 # publish url
 PUBLISH_URL = "http://192.168.30.183:8081/test/ai/publish"
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, "logs/glossa.log"),  # 日志文件的位置
+            'maxBytes': 300 * 1024 * 1024,
+            'backupCount': 10,
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console',"file"],
+            'propagate': True,
+        }
 
+    }
+}
