@@ -31,12 +31,28 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 CORS_ORIGIN_WHITELIST = (
     'http://192.168.30.107:9528',
     'http://localhost:9528',
+    "http://localhost:8080"
 
 )
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    "meta",
+    "token"
+]
 
 # Application definition
 
@@ -48,6 +64,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "corsheaders",
+    "social_django",
     "rest_framework",
     'rest_framework.authtoken',
     "users.apps.UsersConfig",
@@ -82,6 +99,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # social_django context
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
+
             ],
         },
     },
@@ -96,9 +117,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'PORT': 3306,
-        'HOST': "localhost",
+        'HOST': "39.98.163.51",
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': '',
         'NAME': 'chat_management'
     }
 }
@@ -140,18 +161,25 @@ USE_TZ = False
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "front/static")
 STATIC_URL = '/static/'
 
-# # 自定义的认证后端
-# AUTHENTICATION_BACKENDS = [
-#    'utils.users.UsernameMobileAuthBackend',
-# ]
+
+AUTHENTICATION_BACKENDS = (
+  'social_core.backends.qq.QQOAuth2',
+  'django.contrib.auth.backends.ModelBackend'
+)
+
+WX_APP_ID = "wx8b68fd63edbd0716"
+WX_OPEN_APP_ID = "wx0e738f974254959e"
+
+SOCIAL_AUTH_QQ_KEY = '101474184'
+SOCIAL_AUTH_QQ_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'
 
 
 REST_FRAMEWORK = {
     # 配置
     'DEFAULT_AUTHENTICATION_CLASSES': (
+            'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
             'rest_framework.authentication.BasicAuthentication',
             'rest_framework.authentication.SessionAuthentication',
-            # 'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         ),
 
 
@@ -165,7 +193,12 @@ JWT_AUTH = {
 
 # train data path prefix
 TRAIN_DATA_PATH_PREFIX = "/chatbot/train/"
+# train model path prefix
+TRAIN_MODEL_PATH_PREFIX = "/chatbot/model/"
+
 # train url
 TRAIN_URL = "http://192.168.30.183:8081/test/ai/train"
 # publish url
 PUBLISH_URL = "http://192.168.30.183:8081/test/ai/publish"
+
+
